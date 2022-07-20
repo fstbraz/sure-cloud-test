@@ -1,0 +1,16 @@
+<app-drawer>
+  <app-random-img
+    [image$]="dogImage$"
+    (startPool)="startDogPool()"
+    (stopPool)="stopDogPool()"
+    (like)="like()"
+    app-drawer-left
+  >
+    <app-random-img-title>Random Dog</app-random-img-title>
+    <app-random-no-data>No Doogo, hit the button to start</app-random-no-data>
+  </app-random-img>
+  <app-favourite [favs]="dogFavs" app-drawer-right>
+    <app-favourite-title>Favourite Dogs</app-favourite-title>
+    <app-favourite-no-data>No favorite doogos :(</app-favourite-no-data>
+  </app-favourite>
+</app-drawer>

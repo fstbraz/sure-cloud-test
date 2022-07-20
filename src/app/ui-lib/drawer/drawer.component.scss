@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  align-items: stretch;
+  align-content: stretch;
+  height: 100%;
+  background-color: #e5e5e5;
+
+  .right {
+    margin-left: auto;
+    width: 456px;
+    background-color: #ffffff;
+  }
+}

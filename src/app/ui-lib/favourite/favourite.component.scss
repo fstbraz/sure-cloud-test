@@ -1,0 +1,25 @@
+.title {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  padding: 30px;
+}
+
+.img-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 22px;
+  .img-cover {
+    margin: 22px;
+    .image {
+      width: 100%;
+      max-width: 174px;
+      max-height: 117px;
+      min-height: 100%;
+    }
+  }
+}
+.no-data {
+  padding-left: 30px;
+}

@@ -1,0 +1,16 @@
+<h4 class="title"><ng-content select="app-favourite-title"></ng-content></h4>
+
+<div *ngIf="favs.length > 0; else noData" class="img-container">
+  <ng-container *ngFor="let fav of favs">
+    <div class="img-cover">
+      <img class="image" [src]="fav.link" />
+    </div>
+    <div></div>
+  </ng-container>
+</div>
+
+<ng-template #noData>
+  <div class="no-data">
+    <ng-content select="app-favourite-no-data"></ng-content>
+  </div>
+</ng-template>

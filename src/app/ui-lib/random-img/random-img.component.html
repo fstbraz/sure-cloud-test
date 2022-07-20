@@ -1,0 +1,21 @@
+<h4 class="title"><ng-content select="app-random-img-title"></ng-content></h4>
+<img
+  class="image"
+  *ngIf="(image$ | async)?.link; else noData"
+  [src]="(image$ | async)?.link"
+/>
+<ng-content select="[app-random-img-title]"></ng-content>
+<div class="button-container">
+  <div *ngIf="(image$ | async)?.date && (image$ | async)?.time" class="date">
+    Date: {{ (image$ | async)?.date }} <br />Time: {{ (image$ | async)?.time }}
+  </div>
+  <button class="button start" (click)="startPool.emit()">Start</button>
+  <button class="button stop" (click)="stopPool.emit()">Stop</button>
+  <button class="button like" (click)="like.emit()">Like</button>
+</div>
+
+<ng-template #noData>
+  <div class="no-data">
+    <ng-content select="app-random-no-data"></ng-content>
+  </div>
+</ng-template>
